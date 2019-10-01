@@ -18,14 +18,6 @@ app.get("/api/data", async (req, res) => {
   }
 });
 
-app.get("/cow/:something", async (req, res) => {
-  try {
-    return res.json("wait wurt");
-  } catch (err) {
-    return res.json("error");
-  }
-});
-
 // Anything that doesn't match the above, send back the index.html file
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "/client/build/index.html"));
