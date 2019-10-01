@@ -10,13 +10,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve our api route /cow that returns a custom talking text cow
 app.get("/api/data", async (req, res) => {
   try {
     return res.json("wait wurt");
   } catch (err) {
     return res.json("error");
-    console.log("error : ", err);
   }
 });
 
